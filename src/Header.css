@@ -10,12 +10,12 @@
 
 .logo-box{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box{
@@ -23,41 +23,47 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 4.5rem;
 }
 
 .heading-primary-main{
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 30px;
+    letter-spacing: 3rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
+    animation-timing-function: ease-out;
+
 }
 
 .heading-primary-sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 15.5px;
+    letter-spacing: 1.5rem;
 
     animation-name: moveInRight;
     animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 @keyframes moveInLeft {
     0%{
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80%{
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100%{
@@ -70,16 +76,77 @@
 @keyframes moveInRight {
     0%{
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80%{
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100%{
         opacity: 1;
         transform: translateX(0);
+    }
+
+}
+
+.btn{
+    position: relative;
+}
+
+.btn:link, .btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    color: #777777;
+    background-color: white;
+    display: inline-block;
+    box-shadow: .3rem .3rem black;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: white;
+
+}
+
+.btn:hover::after{
+    animation: 1s expand;
+}
+
+@keyframes expand {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.btn-animated{
+    animation: 1s moveInBottom;
+    animation-delay: .75s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
     }
 
 }

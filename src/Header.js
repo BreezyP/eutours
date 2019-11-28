@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from "./img/logo-white.png";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 
@@ -17,6 +18,7 @@ const Header = () => {
                         <span className="heading-primary-main">Outdoors</span>
                         <span className="heading-primary-sub">Is Where life happens</span>
                     </h1>
+                    <AnchorLink className='btn btn-animated' href='#'>discover our tours </AnchorLink>
                 </div>
             </header>
         </div>
