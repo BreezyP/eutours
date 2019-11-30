@@ -1,0 +1,108 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/grid";
+
+.header{
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url("../images/night.jpg");
+  background-size: cover;
+  background-position: bottom;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-box{
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.logo{
+  height: 3.5rem;
+}
+
+.text-box{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary{
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 4.5rem;
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+}
+
+.heading-primary-sub{
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+
+.btn{
+  position: relative;
+  font-size: 1.6rem;
+
+  &:link, &:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    color: #777777;
+    background-color: white;
+    display: inline-block;
+    box-shadow: .3rem .3rem black;
+  }
+
+  &::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: white;
+
+  }
+
+  &:hover::after{
+    animation: 1s expand;
+  }
+}
+
+.btn-animated{
+  animation: 1s moveInBottom;
+  animation-delay: .75s;
+  animation-fill-mode: backwards;
+}
+

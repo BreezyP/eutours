@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 import logo from "./img/logo-white.png";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
