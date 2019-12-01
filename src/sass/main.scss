@@ -8,6 +8,10 @@
 @import "base/utilities";
 
 @import "layout/grid";
+@import "layout/about";
+@import "layout/features";
+
+@import "components/feature-box";
 
 .header{
   height: 95vh;
@@ -79,7 +83,17 @@
     color: #777777;
     background-color: white;
     display: inline-block;
-    box-shadow: .3rem .3rem black;
+    box-shadow: 0rem 1rem 2rem rgba(black, 0.2);
+    transition: all .3s;
+  }
+
+  &:hover{
+    transform: translateY(-2px);
+  }
+
+  &:active{
+    transform: translateY(2px);
+    box-shadow: 1rem 1rem 3rem rgba(black, 0.3);
   }
 
   &::after{
@@ -98,11 +112,43 @@
   &:hover::after{
     animation: 1s expand;
   }
+
+  &-animated{
+    animation: 1s moveInBottom;
+    animation-delay: .75s;
+    animation-fill-mode: backwards;
+  }
+
+
+
+  &-text{
+
+    font-size: $default-fontsize;
+
+    &:link, &:visited{
+      color: $color-secondary;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid $color-secondary;
+      padding: 3px;
+      transition: all .2s;
+    }
+
+    &:hover{
+      background-color: $color-secondary;
+      color: white;
+      box-shadow: 0 1rem 2rem rgba(black, .15);
+      transform: translateY(-2px);
+    }
+
+    &:active{
+      transform: translateY(2px);
+
+    }
+  }
+
 }
 
-.btn-animated{
-  animation: 1s moveInBottom;
-  animation-delay: .75s;
-  animation-fill-mode: backwards;
-}
+
+
 

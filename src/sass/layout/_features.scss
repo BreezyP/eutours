@@ -1,0 +1,13 @@
+.heading-tertiary {
+
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-features{
+  padding: 20rem;
+  background-image: linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url("../../images/river.jpg");
+  background-size: cover;
+  background-position: center;
+}
