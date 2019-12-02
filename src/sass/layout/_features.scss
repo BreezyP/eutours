@@ -10,4 +10,10 @@
   background-image: linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url("../../images/river.jpg");
   background-size: cover;
   background-position: center;
+
+  transform: skewY(-7deg);
+
+  & > *{
+    transform: skewY(7deg);
+  }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "./Header";
 import About from "./About";
 import Features from "./Features";
+import Tours from "./Tours";
 import './sass/main.scss'
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
             <Header/>
             <About/>
             <Features/>
+            <Tours/>
         </div>);
 };
 

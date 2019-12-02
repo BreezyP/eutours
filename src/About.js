@@ -1,5 +1,6 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Heading from "./components/Heading";
 
 import nat1 from './img/nat-1-large.jpg'
 import nat2 from './img/nat-2-large.jpg'
@@ -13,17 +14,6 @@ const sectionAbout = {
 
 };
 
-const headingSecondary = {
-    fontSize: '3.5rem',
-    textTransform: 'uppercase',
-    fontWeight: 700,
-    backgroundImage: `linear-gradient(to right, #BA45D5, #00A3B4)`,
-    display: 'inline-block',
-    webkitBackgroundClip: 'text',
-    color: 'transparent',
-    letterSpacing: '2px',
-};
-
 const headingTertiary = {
     fontSize: '2rem',
     fontWeight: 700,
@@ -35,9 +25,7 @@ const About = () => {
         <div>
             <section style={sectionAbout} className="section-about">
                 <div className="u-center-text ">
-                    <h2 style={headingSecondary} className="heading-secondary u-margin-bottom-large">
-                        Exciting tours for adventurous people
-                    </h2>
+                    <Heading title="Exciting tours for adventurous people"/>
                 </div>
 
                 <div className="row">

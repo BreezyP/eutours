@@ -1,0 +1,99 @@
+.card{
+
+  height: 52rem;
+  perspective: 150rem;
+  position: relative;
+
+  &__side{
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, .15);
+    overflow: hidden;
+
+    &--front{
+    }
+
+    &--back{
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front{
+    transform: rotateY(-180deg);
+
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture{
+    background-size: cover;
+    height: 23rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &__heading{
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    position: absolute;
+    top:12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading--span{
+    padding: .8rem 2.7rem;
+    box-decoration-break: clone;
+  }
+
+  &__details{
+
+    padding: 3rem;
+
+    ul{
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child){
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  &__cta{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+
+
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  &__price-only{
+    font-size: 2rem;
+  }
+
+  &__price-value{
+    font-weight: 300;
+    font-size: 8rem;
+  }
+}
