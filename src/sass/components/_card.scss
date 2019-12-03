@@ -52,7 +52,7 @@
   }
 
   &__heading--span{
-    padding: .8rem 2.7rem;
+    padding: .8rem 2.8rem;
     box-decoration-break: clone;
   }
 
@@ -95,5 +95,9 @@
   &__price-value{
     font-weight: 300;
     font-size: 8rem;
+  }
+
+  &__btn{
+    top: 5rem;
   }
 }

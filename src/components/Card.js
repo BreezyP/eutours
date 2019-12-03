@@ -34,7 +34,7 @@ const Card = (props) => {
                         <p className="card__price-only">Only</p>
                         <p className="card__price-value">{props.price}</p>
                     </div>
-                    <AnchorLink style={{marginTop: '1rem'}} className='btn btn-animated' href='#'>Buy it now! </AnchorLink>
+                    <AnchorLink style={{marginTop: '1rem'}} className='card__btn btn btn--white' href='#'>Buy it now! </AnchorLink>
 
                 </div>
             </div>

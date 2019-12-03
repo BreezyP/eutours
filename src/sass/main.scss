@@ -81,8 +81,6 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 1.5rem 4rem;
-    color: #777777;
-    background-color: white;
     display: inline-block;
     box-shadow: 0rem 1rem 2rem rgba(black, 0.2);
     transition: all .3s;
@@ -106,7 +104,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: white;
 
   }
 
@@ -118,6 +115,24 @@
     animation: 1s moveInBottom;
     animation-delay: .75s;
     animation-fill-mode: backwards;
+  }
+
+  &--white{
+    background-color: white;
+    color: #777777;
+
+    &::after{
+      background-color: white;
+    }
+  }
+
+  &--blue{
+    background-image: linear-gradient(to right, $color-primary, $color-secondary);
+    color: white;
+
+    &::after{
+      background-image: linear-gradient(to right, $color-primary, $color-secondary);
+    }
   }
 
 
