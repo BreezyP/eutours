@@ -10,7 +10,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const sectionTours = {
     marginTop: '-11rem',
     backgroundColor: '#f7f7f7',
-    padding: '25rem 0 50rem 0',
+    padding: '25rem 0 20rem 0',
 };
 
 
