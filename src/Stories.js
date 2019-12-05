@@ -46,7 +46,7 @@ const Stories = () => {
                 </video>
             </div>
 
-            <div className="u-center-text u-margin-bottom-medium">
+            <div className="u-center-text u-margin-bottom-huge">
                 <Heading title="We make people genuinely happy"/>
             </div>
 

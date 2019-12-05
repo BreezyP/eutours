@@ -24,7 +24,7 @@ const About = () => {
     return(
         <div>
             <section style={sectionAbout} className="section-about">
-                <div className="u-center-text ">
+                <div className="u-center-text u-margin-bottom-large">
                     <Heading title="Exciting tours for adventurous people"/>
                 </div>
 

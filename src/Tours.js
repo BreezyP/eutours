@@ -58,7 +58,7 @@ const snowCard = {
 const Tours = () => {
     return(
         <section className="section-tours" style={sectionTours}>
-            <div className="u-center-text">
+            <div className="u-center-text u-margin-bottom-huge">
                 <Heading title="Most popular tours"/>
             </div>
 
