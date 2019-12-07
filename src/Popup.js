@@ -1,11 +1,13 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import photoOne from './img/nat-8.jpg';
 import photoTwo from './img/nat-9.jpg';
 import Heading from "./components/Heading";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Popup = () => {
-    return (
+const Popup = (props) => {
+
+    return ReactDOM.createPortal(
         <div className="popup">
             <div className="popup__content">
                 <div className="popup__left">
@@ -25,7 +27,8 @@ const Popup = () => {
 
                 </div>
             </div>
-        </div>
+        </div>,
+        document.querySelector('#popup')
     );
 };
 

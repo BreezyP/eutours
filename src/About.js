@@ -23,7 +23,7 @@ const headingTertiary = {
 const About = () => {
     return(
         <div>
-            <section style={sectionAbout} className="section-about">
+            <section style={sectionAbout} className="section-about" id="about">
                 <div className="u-center-text u-margin-bottom-large">
                     <Heading title="Exciting tours for adventurous people"/>
                 </div>

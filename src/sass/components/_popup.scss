@@ -6,6 +6,14 @@
   left: 0;
   width: 100%;
   z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: all .3s;
+
+  &:target{
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__content{
     @include absCenter;

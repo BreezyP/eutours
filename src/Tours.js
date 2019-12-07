@@ -5,7 +5,7 @@ import Card from "./components/Card";
 import seaCardPicture from './img/nat-5.jpg';
 import forestCardPicture from './img/nat-6.jpg';
 import snowCardPicture from './img/nat-7.jpg';
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import Popup from "./Popup";
 
 const sectionTours = {
     marginTop: '-11rem',
@@ -55,37 +55,60 @@ const snowCard = {
 
 
 
-const Tours = () => {
-    return(
-        <section className="section-tours" style={sectionTours}>
-            <div className="u-center-text u-margin-bottom-huge">
-                <Heading title="Most popular tours"/>
-            </div>
+class Tours extends React.Component {
 
-            <div className="row">
-                <div className="col-1-of-3">
-                    <Card back={seaCard.CardBack} pic={seaCard.CardPic}
-                          title={seaCard.CardTitle} details={seaCard.CardDetails}
-                          price={seaCard.CardValue}/>
-                </div>
-                <div className="col-1-of-3">
-                    <Card back={forestCard.CardBack} pic={forestCard.CardPic}
-                          title={forestCard.CardTitle} details={forestCard.CardDetails}
-                          price={forestCard.CardValue}/>
-                </div>
-                <div className="col-1-of-3">
-                    <Card back={snowCard.CardBack} pic={snowCard.CardPic}
-                          title={snowCard.CardTitle} details={snowCard.CardDetails}
-                          price={snowCard.CardValue}/>
-                </div>
-            </div>
+    state = {displayPopup: false};
 
-            <div className="u-center-text">
-                <AnchorLink className='card__btn btn btn--blue' href='#'>Discover all tours </AnchorLink>
+    renderPopup = () => {
+        return (
+            <div>
+                <Popup />
             </div>
+        );
+    };
 
-        </section>
-    );
-};
+    renderContent() {
+        return (
+            <section className="section-tours" style={sectionTours} id="tours">
+                <div className="u-center-text u-margin-bottom-huge">
+                    <Heading title="Most popular tours"/>
+                </div>
+                <div className="row">
+                    <div className="col-1-of-3">
+                        <Card back={seaCard.CardBack} pic={seaCard.CardPic}
+                              title={seaCard.CardTitle} details={seaCard.CardDetails}
+                              price={seaCard.CardValue}/>
+                    </div>
+                    <div className="col-1-of-3">
+                        <Card back={forestCard.CardBack} pic={forestCard.CardPic}
+                              title={forestCard.CardTitle} details={forestCard.CardDetails}
+                              price={forestCard.CardValue}/>
+                    </div>
+                    <div className="col-1-of-3">
+                        <Card back={snowCard.CardBack} pic={snowCard.CardPic}
+                              title={snowCard.CardTitle} details={snowCard.CardDetails}
+                              price={snowCard.CardValue}/>
+                    </div>
+                </div>
+
+                <div className="u-center-text">
+                    <button onClick={() => {this.setState({
+                        displayPopup: true
+                    })}} className='card__btn btn btn--blue'>Discover all tours</button>
+                </div>
+
+            </section>
+        );
+    };
+
+    render() {
+
+        if(this.state.displayPopup){
+            return ([this.renderPopup(), this.renderContent()]);
+        }
+
+        return this.renderContent();
+    }
+}
 
 export default Tours;

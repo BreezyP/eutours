@@ -38,7 +38,7 @@ const storyTwo = {
 
 const Stories = () => {
     return (
-        <section style={sectionStories} className="section-stories">
+        <section style={sectionStories} className="section-stories" id="stories">
             <div className="bg-video">
                 <video className="bg-video__content" autoPlay="true" muted="true" loop="true">
                     <source src={mp4} type="video/mp4"/>

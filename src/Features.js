@@ -28,7 +28,7 @@ const Features = () => {
 
 
     return(
-        <section className="section-features">
+        <section className="section-features" id="features">
             <div className="row">
                 <div className="col-1-of-4">
                     <CardSimple title={firstCardTitle} paragraph={firstCardParagraph} icon={firstCardIcon}/>

@@ -1,9 +1,12 @@
 import React from 'react';
 import Heading from "./components/Heading";
 
+
+
 const Booking = () => {
+
     return (
-        <section className="section-book">
+        <section className="section-book" id="booking">
             <div className="row">
                 <div className="book">
                     <div className="book__form">

@@ -7,7 +7,6 @@ import Stories from "./Stories";
 import Booking from "./Booking";
 import Footer from "./Footer";
 import Nav from "./Nav";
-import Popup from "./Popup";
 import './sass/main.scss'
 
 const App = () => {
@@ -21,7 +20,6 @@ const App = () => {
             <Stories/>
             <Booking/>
             <Footer/>
-            <Popup/>
         </div>);
 };
 
