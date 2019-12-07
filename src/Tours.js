@@ -81,7 +81,7 @@ const Tours = () => {
             </div>
 
             <div className="u-center-text">
-                <AnchorLink className='card__btn btn btn--blue u-center-text' href='#'>Discover all tours </AnchorLink>
+                <AnchorLink className='card__btn btn btn--blue' href='#'>Discover all tours </AnchorLink>
             </div>
 
         </section>
