@@ -6,14 +6,6 @@ import nat1 from './img/nat-1-large.jpg'
 import nat2 from './img/nat-2-large.jpg'
 import nat3 from './img/nat-3-large.jpg'
 
-
-const sectionAbout = {
-    backgroundColor: '#f7f7f7',
-    padding: '25rem 0',
-    marginTop: '-20vh',
-
-};
-
 const headingTertiary = {
     fontSize: '2rem',
     fontWeight: 700,
@@ -23,7 +15,7 @@ const headingTertiary = {
 const About = () => {
     return(
         <div>
-            <section style={sectionAbout} className="section-about" id="about">
+            <section className="section-about" id="about">
                 <div className="u-center-text u-margin-bottom-large">
                     <Heading title="Exciting tours for adventurous people"/>
                 </div>

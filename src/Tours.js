@@ -7,13 +7,6 @@ import forestCardPicture from './img/nat-6.jpg';
 import snowCardPicture from './img/nat-7.jpg';
 import Popup from "./Popup";
 
-const sectionTours = {
-    marginTop: '-11rem',
-    backgroundColor: '#f7f7f7',
-    padding: '25rem 0 20rem 0',
-};
-
-
 const seaCard = {
     CardPic: {
         backgroundImage: `linear-gradient(
@@ -62,14 +55,21 @@ class Tours extends React.Component {
     renderPopup = () => {
         return (
             <div>
-                <Popup />
+                <Popup onClick={(event) => {
+                    event.preventDefault();
+                    this.setState({displayPopup: false})
+                }}/>
             </div>
         );
     };
 
+    buttonPopup = (event) => {
+        this.setState({displayPopup: true })
+    };
+
     renderContent() {
         return (
-            <section className="section-tours" style={sectionTours} id="tours">
+            <section className="section-tours" id="tours">
                 <div className="u-center-text u-margin-bottom-huge">
                     <Heading title="Most popular tours"/>
                 </div>
@@ -77,7 +77,7 @@ class Tours extends React.Component {
                     <div className="col-1-of-3">
                         <Card back={seaCard.CardBack} pic={seaCard.CardPic}
                               title={seaCard.CardTitle} details={seaCard.CardDetails}
-                              price={seaCard.CardValue}/>
+                              price={seaCard.CardValue} popup={() => this.buttonPopup}/>
                     </div>
                     <div className="col-1-of-3">
                         <Card back={forestCard.CardBack} pic={forestCard.CardPic}
@@ -92,9 +92,7 @@ class Tours extends React.Component {
                 </div>
 
                 <div className="u-center-text">
-                    <button onClick={() => {this.setState({
-                        displayPopup: true
-                    })}} className='card__btn btn btn--blue'>Discover all tours</button>
+                    <button onClick={this.buttonPopup} className='card__btn btn btn--blue'>Discover all tours</button>
                 </div>
 
             </section>

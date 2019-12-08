@@ -2,8 +2,17 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include respond(md){
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   &:not(:last-child){
-    margin-bottom: $gutter-horizontal;
+    margin-bottom: $gutter-vertical;
+
+    @include respond(md){
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   [class^="col-"]{
@@ -12,6 +21,15 @@
 
     &:not(:last-child){
       margin-right: $gutter-horizontal;
+
+      @include respond(md){
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(md){
+      width: 100% !important;
     }
   }
 

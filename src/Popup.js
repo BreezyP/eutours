@@ -16,6 +16,7 @@ const Popup = (props) => {
 
                 </div>
                 <div className="popup__right">
+                    <a href='#' onClick={props.onClick} className="popup__close">&times;</a>
                     <div className="u-margin-bottom-medium">
                         <Heading title="Start booking now"/>
                     </div>

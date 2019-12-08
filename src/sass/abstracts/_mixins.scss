@@ -12,3 +12,34 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+/*
+ breakpoint argument choices
+ - sm
+ - md
+ - lg
+ - xl
+ */
+
+
+
+@mixin respond($breakpoint){
+
+  @if $breakpoint == sm {
+    @media(max-width: 37.5em)  { @content }
+  }
+
+  @if $breakpoint == md {
+    @media(max-width: 56.25em)  { @content }
+  }
+
+  @if $breakpoint == lg {
+    @media(max-width: 75em)  { @content }
+  }
+
+  @if $breakpoint == xl {
+    @media(min-width: 112.5em)  { @content }
+  }
+
+}

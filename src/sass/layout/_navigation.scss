@@ -16,6 +16,17 @@
     box-shadow: 0 1rem 3rem rgba(black, .1);
     text-align: center;
     cursor: pointer;
+
+    @include respond(md){
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(sm){
+      top: 3rem;
+      right: 3rem;
+    }
+
   }
 
   &__background{
@@ -30,6 +41,17 @@
     transition: transform .6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
     //transform: scale(75);
+
+    @include respond(md){
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(sm){
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+
   }
 
   &__nav{

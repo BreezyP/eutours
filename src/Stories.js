@@ -8,10 +8,6 @@ import webm from './img/video.webm';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
-const sectionStories = {
-    padding: '10rem 0',
-};
-
 const storyOne = {
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. " +
         "Adipisci blanditiis enim esse fugiat id, ipsum, possimus " +
@@ -38,7 +34,7 @@ const storyTwo = {
 
 const Stories = () => {
     return (
-        <section style={sectionStories} className="section-stories" id="stories">
+        <section className="section-stories" id="stories">
             <div className="bg-video">
                 <video className="bg-video__content" autoPlay="true" muted="true" loop="true">
                     <source src={mp4} type="video/mp4"/>

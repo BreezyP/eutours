@@ -52,4 +52,23 @@
 
     hyphens: auto;
   }
+  &__close{
+
+    transition: all .2s;
+
+    &:link, &:visited{
+      color: #333333;
+      text-decoration: none;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      line-height: 1rem;
+      display: inline-block;
+    }
+
+    &:hover{
+      color: $color-primary;
+    }
+  }
 }

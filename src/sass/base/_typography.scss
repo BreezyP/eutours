@@ -3,11 +3,65 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
+}
+
+.heading-primary{
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 4.5rem;
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @include respond(sm){
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+
+}
+
+.heading-primary-sub{
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @include respond(sm){
+    letter-spacing: .5rem;
+  }
 }
 
 .heading-secondary{
   transition: all .2s;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #BA45D5, #00A3B4);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+
+  @include respond(md){
+    font-size: 3rem;
+  }
+
+  @include respond(sm){
+    font-size: 2.5rem;
+  }
 
   &:hover{
     transform: skewY(2deg) ;

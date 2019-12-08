@@ -17,7 +17,7 @@ const Header = () => {
                         <span className="heading-primary-main">Outdoors</span>
                         <span className="heading-primary-sub">Is Where life happens</span>
                     </h1>
-                    <AnchorLink className='btn btn--white btn-animated' href='#'>discover our tours </AnchorLink>
+                    <AnchorLink offset='-170' className='btn btn--white btn-animated' href='#tours'>discover our tours </AnchorLink>
                 </div>
             </header>
         </div>

@@ -1,14 +1,7 @@
 import React from 'react';
 
 const headingSecondary = {
-    fontSize: '3.5rem',
-    textTransform: 'uppercase',
-    fontWeight: 700,
-    backgroundImage: `linear-gradient(to right, #BA45D5, #00A3B4)`,
-    display: 'inline-block',
-    webkitBackgroundClip: 'text',
-    color: 'transparent',
-    letterSpacing: '2px',
+
 };
 
 const Heading = (props) => {

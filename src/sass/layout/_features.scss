@@ -6,12 +6,16 @@
 }
 
 .section-features{
-  padding: 20rem;
+  padding: 20rem 0;
   background-image: linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url("../../images/river.jpg");
   background-size: cover;
   background-position: center;
 
   transform: skewY(-7deg);
+
+  @include respond(med){
+    padding: 15rem 0;
+  }
 
   & > *{
     transform: skewY(7deg);
